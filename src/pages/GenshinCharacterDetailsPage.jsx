@@ -97,7 +97,7 @@ function GenshinCharacterDetails() {
             <p>VISION: {vision}</p>
 
             <div>
-              <p>Weapon: {weapon}</p>
+              <p>WEAPON: {weapon}</p>
             </div>
             <p>GENDER: {gender}</p>
             <p>NATION: {nation}</p>

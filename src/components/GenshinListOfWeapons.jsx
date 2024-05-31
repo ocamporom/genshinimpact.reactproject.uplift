@@ -2,7 +2,7 @@ import style from './GenshinListOfWeapons.module.css'
 import { Link } from 'react-router-dom';
 
 function GenshinListOfWeapons({ id, type, rarity, subStat, passiveDesc, name,  }) {
-  const weaponUrl = `https://genshin.jmp.blue/weapons/${id}/icon`;
+  const weaponUrl = `https://genshin.jmp.blue/weapons/${type}/icon`;
 
   // console.log("id", id);
   // console.log("name", name);
@@ -13,8 +13,9 @@ function GenshinListOfWeapons({ id, type, rarity, subStat, passiveDesc, name,  }
       <div className={style.WeaponsList} >
         <img className={style.WeaponImageItself} src={weaponUrl} alt={name} />
         <hr />
+        <div>ID: {id}</div>
         <div>NAME: {name}</div>
-        <div>TYPE: {type}</div>
+        {/* <div>TYPE: {type}</div> */}
         <div>RARITY: {rarity}</div>
         <div>SUBSTAT: {subStat}</div>
         <div>DESCRIPTION:   {passiveDesc}</div>
