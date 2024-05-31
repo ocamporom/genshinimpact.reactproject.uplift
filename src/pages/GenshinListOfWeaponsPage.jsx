@@ -3,6 +3,7 @@ import GenshinHeader from "../components/GenshinHeader";
 import GenshinListOfWeapons from "../components/GenshinListOfWeapons";
 import GenshinAuthContext from "../contexts/GenshinAuthContext";
 import { useParams } from "react-router-dom";
+import style from './GenshinListOfWeaponPage.module.css';
 
 function GenshinListOfWeaponspage() {
 
@@ -28,7 +29,7 @@ function GenshinListOfWeaponspage() {
   return (
     <>
       <GenshinHeader />
-
+      <div className={style.allWeapons}>
       {weapons.map((weapon, index) => (
         <GenshinListOfWeapons
           id={weapon.id}
@@ -40,6 +41,7 @@ function GenshinListOfWeaponspage() {
           key={index}
         />
       ))}
+      </div>
     </>
   );
 }
