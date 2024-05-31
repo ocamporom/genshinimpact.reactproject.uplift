@@ -1,0 +1,17 @@
+.characters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+
+@media (width >= 768px) {
+  .characters {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (width >= 1024px) {
+  .characters {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}

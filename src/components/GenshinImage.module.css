@@ -1,0 +1,22 @@
+.genshinContainer {
+  color: black;
+}
+
+.genshinImageItself {
+  width: 95%;
+  height: 33dvh;
+  border-radius: 9%;
+  filter: drop-shadow(2px 2px 13px rgb(151, 12, 12));
+  transition: all 2s ease-in-out;
+}
+
+.genshinImageItself:hover{
+  transform: translateY(-30px) ;
+  transition: 1s ;
+}
+.characterName {
+  color: beige;
+  font-size: smaller;
+  text-align: center;
+  text-decoration: none;
+}
