@@ -45,3 +45,14 @@ function GenshinListOfWeaponspage() {
 }
 
 export default GenshinListOfWeaponspage;
+
+
+// {artifacts.map((artifact, index) => (
+//   <GenshinListOfArtifacts
+//      id={artifact.id}
+//      maxRarity={artifact.max_rarity}
+//      name={artifact.name}
+//      twoPieceBonus={artifact['2-piece_bonus']}
+//      fourPieceBonus={artifact['4-piece_bonus']}
+//      key={index} />
+// )}
