@@ -1,7 +1,15 @@
-.allWeapons{
+.allWeapons {
   color: aliceblue;
-  /* display: grid; */
-  /* grid-template-columns: repeat(3, 2fr);
-  grid-template-rows: repeat(3, 2fr); */
  
 }
+
+/* 
+@media (width >= 1024px) {
+
+  .allWeapons{
+     display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  }
+  
+} */
