@@ -13,3 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+a{
+  color: rgb(242, 231, 224);
+  text-decoration: none;
+  font-size: larger;
+ 
+  background-color: rgba(93, 137, 175, 0);
+}
+

@@ -17,6 +17,18 @@
   opacity: 1;
 } */
 
+.weaponLink{
+  color: rgb(37, 55, 102);
+  display: ruby;
+  font-size: large;
+}
+
+.artifactsLink{
+  color: rgb(0, 0, 0);
+  display: ruby;
+  font-size: medium;
+}
+
 
 .h1Name{
   color: rgb(238, 196, 196);

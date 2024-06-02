@@ -1,17 +1,13 @@
 .allWeapons {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
   color: aliceblue;
-  gap: 16px;
+
+  width: auto;
 }
 
-
-/* @media (width >= 1024px) {
-
-  .allWeapons{
-     display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+@media (width >= 768px) {
+  .allWeapons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
   }
-  
-} */
+}

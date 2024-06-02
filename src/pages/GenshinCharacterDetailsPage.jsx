@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 
 import style from "./GenshinCharacterDetailsPage.module.css";
 
-
-
 const alternateImageMap = {
   "Arataki Itto": "arataki-itto",
   "Kamisato Ayaka": "ayaka",
@@ -19,11 +17,11 @@ const alternateImageMap = {
   "Shikanoin Heizou": "shikanoin-heizou",
   "Yae Miko": "yae-miko",
   "Yun Jin": "yun-jin",
-  'Travelers': "traveler-anemo",
-  'Travelers': "traveler-dendro",
-  'Travelers': "traveler-electro",
-  'Travelers': "traveler-geo",
-  'Travelers': "traveler-hydro",
+  Travelers: "traveler-anemo",
+  Travelers: "traveler-dendro",
+  Travelers: "traveler-electro",
+  Travelers: "traveler-geo",
+  Travelers: "traveler-hydro",
 };
 
 function GenshinCharacterDetails() {
@@ -78,8 +76,7 @@ function GenshinCharacterDetails() {
     <>
       <div className={style.genshinCharacterDetails}>
         <div className={style.h1Name}>
-          <h1>"{name}"</h1> 
-          
+          <h1>"{name}"</h1>
         </div>
         <hr />
         <div className={style.imageDetails}>
@@ -97,9 +94,6 @@ function GenshinCharacterDetails() {
             <p>TITLE: {title}</p>
             <p>VISION: {vision}</p>
 
-            <div>
-              <p>WEAPON: {weapon}</p>
-            </div>
             <p>GENDER: {gender}</p>
             <p>NATION: {nation}</p>
             <p>AFFILIATION: {affiliation}</p>
@@ -107,17 +101,35 @@ function GenshinCharacterDetails() {
             <p>CONSTELLATION: {constellation}</p>
 
             <div className={style.backButton}>
-            <Link to={`/weapons/specific/${weapon}`}
+              {/* <Link to={`/weapons/specific/${weapon}`}
               style={{
                 pointerEvents: false ? 'none': 'unset'
               }}
             
-            >Other Weapon Options&#127919;</Link> <br/>  
-            {/* <Link to="/weapons">To All Weapons&#127919;</Link> <br/> */}
-            <Link to="/artifacts">To All Artifacts&#128255;</Link> <br/>
-              <Link to="/">&#128281;</Link><br/>
-              
-              
+            >Other Weapon Options&#127919;</Link> <br/>   */}
+              {/* <Link to="/weapons">To All Weapons&#127919;</Link> <br/> */}
+
+              <div className={style.weaponLink}>
+                WEAPON:
+                <Link
+                  to={`/weapons/specific/${weapon}`}
+                  style={{
+                    pointerEvents: false ? "none" : "unset",
+                  }}
+                >
+                  <p> {weapon} List</p>
+                </Link>
+              </div>
+              <br />
+
+              <div className={style.artifactsLink}>
+                ARTIFACTS:
+                <Link to="/artifacts">Artifacts List</Link>
+                
+              </div><br />
+
+              <Link to="/">&#128281;</Link>
+              <br />
             </div>
           </div>
         </div>

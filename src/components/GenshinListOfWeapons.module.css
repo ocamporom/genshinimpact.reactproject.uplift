@@ -13,19 +13,23 @@
   height: 100%;
 }
 .WeaponImageItself {
+  width: 70px;
   filter: drop-shadow(2px 2px 13px rgb(214, 171, 171));
 }
 .BackToTopButton {
   text-decoration: none;
   font-size: larger;
   font-size: xx-small;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 53px;
 }
 @media (width >= 768px) {
   .WeaponImageItself {
     width: 19%;
   }
-} 
- @media (width >= 1024px) {
+}
+@media (width >= 1024px) {
   .WeaponImageItself {
     height: 11%;
     width: auto;
