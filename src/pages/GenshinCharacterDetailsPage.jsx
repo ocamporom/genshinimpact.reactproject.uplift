@@ -114,7 +114,7 @@ function GenshinCharacterDetails() {
             
             >Other Weapon Options&#127919;</Link> <br/>  
             {/* <Link to="/weapons">To All Weapons&#127919;</Link> <br/> */}
-            <Link to="/artifacts">To All Artifacts&#127919;</Link> <br/>
+            <Link to="/artifacts">To All Artifacts&#128255;</Link> <br/>
               <Link to="/">&#128281;</Link><br/>
               
               

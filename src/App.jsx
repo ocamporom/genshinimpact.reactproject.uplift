@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     element: <GenshinListOfArtifactspage />,
   },
   {
-    path: "/weapons/specific/:name",
+    path: "/weapons/specific/:name", // KEBIT KE KNI ITANG VARIABLE A WEAPON FOR THE LINK BANG LUNTO YAMU ITANG PAYTUNAN MUNG TYPE AS PER THE CHARACTER!!
     element: <GenshinSpecificListOfWeaponsPage />, //ADDED 060224
   },
 ]);
