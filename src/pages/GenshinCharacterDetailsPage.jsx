@@ -60,6 +60,7 @@ function GenshinCharacterDetails() {
     character === undefined ? "Loading..." : character.affiliation;
   const description =
     character === undefined ? "Loading..." : character.description;
+  // const weapon = true ? "Loading..." : character.weapon;
   const weapon = character === undefined ? "Loading..." : character.weapon;
   const vision = character === undefined ? "Loading..." : character.vision;
   const rarity = character === undefined ? "Loading..." : character.rarity;
@@ -106,8 +107,13 @@ function GenshinCharacterDetails() {
             <p>CONSTELLATION: {constellation}</p>
 
             <div className={style.backButton}>
-            <Link to="/weapons/specific">To  Weapon Type&#127919;</Link> <br/> 
-            <Link to="/weapons">To All Weapons&#127919;</Link> <br/>
+            <Link to={`/weapons/specific/${weapon}`}
+              style={{
+                pointerEvents: false ? 'none': 'unset'
+              }}
+            
+            >Other Weapon Options&#127919;</Link> <br/>  
+            {/* <Link to="/weapons">To All Weapons&#127919;</Link> <br/> */}
             <Link to="/artifacts">To All Artifacts&#127919;</Link> <br/>
               <Link to="/">&#128281;</Link><br/>
               

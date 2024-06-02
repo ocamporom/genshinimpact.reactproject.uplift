@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     element: <GenshinListOfArtifactspage />,
   },
   {
-    path: "/weapons/specific",
+    path: "/weapons/specific/:name",
     element: <GenshinSpecificListOfWeaponsPage />, //ADDED 060224
   },
 ]);

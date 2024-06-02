@@ -53,7 +53,7 @@ function GenshinListOfArtifacts({
         <div className={style.BackToTopButton2}>
           <a href="#top">Back to Top</a>
           <br />
-          <Link to="/weapons">Go to Weapons&#127919;</Link>
+          <Link to="/weapons">Go to ALL Weapons&#127919;</Link>
           <br />
           <Link to="/">Back to Home</Link>
         </div>

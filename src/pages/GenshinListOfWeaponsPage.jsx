@@ -30,7 +30,7 @@ function GenshinListOfWeaponspage() {
     <>
       <GenshinHeader />
       <div className={style.allWeapons}>
-      {weapons.map((weapon, index) => (
+      {weapons.map((weapon, index) => ( //slice lang na add 060224 1113H
         <GenshinListOfWeapons
           id={weapon.id}
           type={weapon.type}

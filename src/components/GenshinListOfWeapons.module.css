@@ -10,10 +10,10 @@
   background-image: url(/src/assets/weaponsbg1.jpeg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  height: 100%;
 }
 .WeaponImageItself {
   filter: drop-shadow(2px 2px 13px rgb(214, 171, 171));
-  width: 70px;
 }
 .BackToTopButton {
   text-decoration: none;
@@ -24,9 +24,10 @@
   .WeaponImageItself {
     width: 19%;
   }
-}
-@media (width >= 1024px) {
+} 
+ @media (width >= 1024px) {
   .WeaponImageItself {
-    width: 11%;
+    height: 11%;
+    width: auto;
   }
 }

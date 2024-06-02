@@ -8,7 +8,7 @@ function GenshinListOfWeapons({ id, type, rarity, subStat, passiveDesc, name,  }
   // console.log("name", name);
 
   return (
-    <>
+    <div>
       <a id="top" />
       <div className={style.WeaponsList} >
         <img className={style.WeaponImageItself} src={weaponUrl} alt={name} />
@@ -24,7 +24,7 @@ function GenshinListOfWeapons({ id, type, rarity, subStat, passiveDesc, name,  }
         <Link to='/'>Back to Home</Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

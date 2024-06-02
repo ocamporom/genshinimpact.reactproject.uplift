@@ -2,7 +2,7 @@ import style from './GenshinListOfWeapons.module.css'
 import { Link } from 'react-router-dom';
 
 function GenshinSpecificListOfWeapons({ id, type, rarity, subStat, passiveDesc, name,  }) {
-  const weaponUrl = `https://genshin.jmp.blue/weapons/all?type=${id}`;
+  const weaponUrl = `https://genshin.jmp.blue/weapons/${id}/icon`;
 
   // console.log("id", id);
   // console.log("name", name);
