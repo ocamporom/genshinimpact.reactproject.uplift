@@ -1,5 +1,9 @@
-import GenshinHeader from './components/GenshinHeader'
-
+import GenshinHeader from '../components/GenshinHeader'
+import { useParams } from 'react-router-dom';
+import { useContext } from 'react';
+import GenshinAuthContext from '../contexts/GenshinAuthContext';
+import { useEffect } from 'react';
+import style from './GenshinSpecificListOfWeapons.module.css'
 
 function GenshinSpecificListOfWeaponsPage() {
 
@@ -27,9 +31,9 @@ function GenshinSpecificListOfWeaponsPage() {
    <>
    <GenshinHeader/>
 
-   <div className={style.allWeapons}>
+   <div className={style.allSpecificWeapons}>
       {filteredWeapons.map((weapon, index) => (
-        <GenshinListOfWeapons
+        <GenshinSpecificListOfWeapons
           id={weapon.id}
           type={weapon.type}
           rarity={weapon.rarity}

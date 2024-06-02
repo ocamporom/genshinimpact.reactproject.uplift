@@ -5,6 +5,7 @@ import GenshinListOfWeaponsPage from "./pages/GenshinListOfWeaponsPage";
 // import GenshinAuthContext from "./contexts/GenshinAuthContext";
 import GenshinAuthProvider from "./contexts/GenshinAuthProvider";
 import GenshinListOfArtifactspage from "./pages/GenshinListOfArtifactsPage";
+import GenshinSpecificListOfWeaponsPage from "./pages/GenshinSpecificListOfWeaponsPage"
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/artifacts",
     element: <GenshinListOfArtifactspage />,
+  },
+  {
+    path: "/weapons/specific",
+    element: <GenshinSpecificListOfWeaponsPage />, //ADDED 060224
   },
 ]);
 

@@ -106,6 +106,7 @@ function GenshinCharacterDetails() {
             <p>CONSTELLATION: {constellation}</p>
 
             <div className={style.backButton}>
+            <Link to="/weapons/specific">To  Weapon Type&#127919;</Link> <br/> 
             <Link to="/weapons">To All Weapons&#127919;</Link> <br/>
             <Link to="/artifacts">To All Artifacts&#127919;</Link> <br/>
               <Link to="/">&#128281;</Link><br/>
