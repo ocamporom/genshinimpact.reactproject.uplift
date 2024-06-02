@@ -10,7 +10,7 @@ function GenshinListOfArtifactspage() {
   // console.log(name);
 
   const { artifacts, setArtifacts } = useContext(GenshinAuthContext);
-  // const [weapons, setWeapons] = useState([]);
+
 
   const fetchArtifacts = async () => {
     const response = await fetch(`https://genshin.jmp.blue/artifacts/all?`);

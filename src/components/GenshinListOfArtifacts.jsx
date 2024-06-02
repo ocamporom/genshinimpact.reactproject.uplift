@@ -8,6 +8,11 @@ function GenshinListOfArtifacts({
   twoPieceBonus,
   fourPieceBonus,
 }) {
+  //  const [imgInfo, setImgInfo] = useState({
+      
+  //  })
+
+
   const artifactsUrl = `https://genshin.jmp.blue/artifacts/${id}/circlet-of-logos`;
   const artifactsUrl2 = `https://genshin.jmp.blue/artifacts/${id}/flower-of-life`;
   const artifactsUrl3 = `https://genshin.jmp.blue/artifacts/${id}/goblet-of-eonothem`;
@@ -16,12 +21,14 @@ function GenshinListOfArtifacts({
 
   return (
     <>
+    <div>
       <a id="top" />
       <div className={style.ArtifactsList}>
         <img
           className={style.ArtifactsImageItself}
           src={artifactsUrl}
           alt={name}
+        
         />
         <img
           className={style.ArtifactsImageItself}
@@ -57,6 +64,7 @@ function GenshinListOfArtifacts({
           <br />
           <Link to="/">Back to Home</Link>
         </div>
+      </div>
       </div>
     </>
   );
