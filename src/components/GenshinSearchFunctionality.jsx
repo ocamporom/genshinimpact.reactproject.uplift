@@ -5,7 +5,7 @@ import React, { createContext, useContext, useReducer } from 'react';
 const SearchContext = createContext();
 
 // Step 2: Implement a reducer function
-const searchReducer = (state, action) => {
+function searchReducer(state, action){
   switch (action.type) {
     case 'SET_SEARCH_TERM':
       return { ...state, searchTerm: action.payload };
@@ -15,7 +15,7 @@ const searchReducer = (state, action) => {
 };
 
 // Step 3: Create a provider
-const SearchProvider = ({ children }) => {
+function SearchProvider({ children }) {
   const [state, dispatch] = useReducer(searchReducer, {
     searchTerm: '',
   });
@@ -28,14 +28,14 @@ const SearchProvider = ({ children }) => {
 };
 
 // Step 4: Use useContext and useReducer
-const SearchComponent = () => {
+function SearchComponent(){
   const { state, dispatch } = useContext(SearchContext);
 
-  const handleSearch = () => {
+function handleSearch(){
     // Perform search based on state.searchTerm
   };
 
-  const handleChange = (event) => {
+function handleChange(event){
     event.preventDefault()
     dispatch({ type: 'SET_SEARCH_TERM', payload: event.target.value });
   };
@@ -55,7 +55,7 @@ const SearchComponent = () => {
 };
 
 // Usage
-const GenshinSearchFunctionality = () => {
+function GenshinSearchFunctionality() {
   return (
     <SearchProvider>
       <SearchComponent />
