@@ -36,16 +36,18 @@ const SearchComponent = () => {
   };
 
   const handleChange = (event) => {
+    event.preventDefault()
     dispatch({ type: 'SET_SEARCH_TERM', payload: event.target.value });
   };
 
   return (
     <div>
       <input
-        type="text"
+        type="search"
         value={state.searchTerm}
         onChange={handleChange}
         placeholder="Search..."
+
       />
       <button onClick={handleSearch}>Search</button>
     </div>
@@ -53,7 +55,7 @@ const SearchComponent = () => {
 };
 
 // Usage
-const App = () => {
+const GenshinSearchFunctionality = () => {
   return (
     <SearchProvider>
       <SearchComponent />
@@ -61,4 +63,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default GenshinSearchFunctionality;

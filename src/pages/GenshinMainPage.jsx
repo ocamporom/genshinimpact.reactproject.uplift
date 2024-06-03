@@ -28,7 +28,7 @@ function GenshinMainPage() {
   return (
     <>
       <GenshinHeader />
-      {/* <GenshinSearchFunctionality /> */}
+      <GenshinSearchFunctionality />
 
       <div className={style.characters}>
         {characters.map((char, index) => (
