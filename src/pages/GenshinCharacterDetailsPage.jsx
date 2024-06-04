@@ -93,7 +93,6 @@ function GenshinCharacterDetails() {
             <p> '{description}'</p>
             <p>TITLE: {title}</p>
             <p>VISION: {vision}</p>
-
             <p>GENDER: {gender}</p>
             <p>NATION: {nation}</p>
             <p>AFFILIATION: {affiliation}</p>
@@ -108,7 +107,7 @@ function GenshinCharacterDetails() {
             
             >Other Weapon Options&#127919;</Link> <br/>   */}
               {/* <Link to="/weapons">To All Weapons&#127919;</Link> <br/> */}
-
+              </div>
               <div className={style.weaponLink}>
                 WEAPON:
                 <Link
@@ -130,7 +129,7 @@ function GenshinCharacterDetails() {
 
               <Link to="/">&#128281;</Link>
               <br />
-            </div>
+            
           </div>
         </div>
       </div>

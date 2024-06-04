@@ -48,7 +48,7 @@ function GenshinArtifactsFooter() {
         >
           <div className={style.artifactsLink}>
             <Link to="/">Home</Link>&nbsp;
-            <Link to="/weapons">Weapons</Link> &nbsp;
+            <Link to="/weapons">All-Weapons</Link> &nbsp;
             <a href="#top">Top</a>
           </div>
           <br />
