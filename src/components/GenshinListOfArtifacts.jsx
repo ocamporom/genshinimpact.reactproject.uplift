@@ -9,9 +9,8 @@ function GenshinListOfArtifacts({
   fourPieceBonus,
 }) {
   //  const [imgInfo, setImgInfo] = useState({
-      
-  //  })
 
+  //  })
 
   const artifactsUrl = `https://genshin.jmp.blue/artifacts/${id}/circlet-of-logos`;
   const artifactsUrl2 = `https://genshin.jmp.blue/artifacts/${id}/flower-of-life`;
@@ -21,50 +20,49 @@ function GenshinListOfArtifacts({
 
   return (
     <>
-    <div>
-      <a id="top" />
-      <div className={style.ArtifactsList}>
-        <img
-          className={style.ArtifactsImageItself}
-          src={artifactsUrl}
-          alt={name}
-        
-        />
-        <img
-          className={style.ArtifactsImageItself}
-          src={artifactsUrl2}
-          alt={name}
-        />
-        <img
-          className={style.ArtifactsImageItself}
-          src={artifactsUrl3}
-          alt={name}
-        />
-        <img
-          className={style.ArtifactsImageItself}
-          src={artifactsUrl4}
-          alt={name}
-        />
-        <img
-          className={style.ArtifactsImageItself}
-          src={artifactsUrl5}
-          alt={name}
-        />
-        <hr />
-        <div>NAME: {name}</div>
-        <div>2-PIECE-BONUS: {twoPieceBonus}</div>
-        <div>4-PIECE-BONUS: {fourPieceBonus}</div>
+      <div>
+        <a id="top" />
+        <div className={style.ArtifactsList}>
+          <img
+            className={style.ArtifactsImageItself}
+            src={artifactsUrl}
+            alt={name}
+          />
+          <img
+            className={style.ArtifactsImageItself}
+            src={artifactsUrl2}
+            alt={name}
+          />
+          <img
+            className={style.ArtifactsImageItself}
+            src={artifactsUrl3}
+            alt={name}
+          />
+          <img
+            className={style.ArtifactsImageItself}
+            src={artifactsUrl4}
+            alt={name}
+          />
+          <img
+            className={style.ArtifactsImageItself}
+            src={artifactsUrl5}
+            alt={name}
+          />
+          <hr />
+          <div>NAME: {name}</div>
+          <div>2-PIECE-BONUS: {twoPieceBonus}</div>
+          <div>4-PIECE-BONUS: {fourPieceBonus}</div>
 
-        <div>MAX RARITY: {maxRarity}</div>
+          <div>MAX RARITY: {maxRarity}</div>
 
-        <div className={style.BackToTopButton2}>
-          {/* <a href="#top">Back to Top</a>
+          <div className={style.BackToTopButton2}>
+            {/* <a href="#top">Back to Top</a>
           <br />
           <Link to="/weapons">Go to ALL Weapons&#127919;</Link>
           <br />
           <Link to="/">Back to Home</Link> */}
+          </div>
         </div>
-      </div>
       </div>
     </>
   );

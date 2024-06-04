@@ -1,35 +1,28 @@
-.genshinFooter{
+.genshinFooter {
   color: black;
   text-align: center;
   padding: 35px;
   position: absolute;
- 
- 
+
   z-index: 9999;
 }
-.genshinFooterText{
+.genshinFooterText {
   color: black;
-  background-color: rgba(29, 14, 247, 0.485);
+  background-color:  #fcf9f9;
   right: 0;
   left: 0;
   bottom: 0;
   text-align: center;
   height: 45px;
   word-spacing: 3rem;
-
 }
 
-.weaponLink{
+.weaponLink {
   color: rgb(4, 13, 36);
   display: ruby;
   font-size: large;
 }
 
-.artifactsLink{
+.artifactsLink {
   color: rgb(0, 0, 0);
- 
-  
-  
-
-
 }

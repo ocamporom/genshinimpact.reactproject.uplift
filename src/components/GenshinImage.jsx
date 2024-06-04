@@ -38,19 +38,6 @@ function GenshinImage({ name }) {
 
 export default GenshinImage;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const imgUrl = `https://genshin.jmp.blue/characters/${normalizeName(name)}/card`;
 //https://genshin.jmp.blue/characters/albedo/card
 

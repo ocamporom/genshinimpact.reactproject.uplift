@@ -125,8 +125,8 @@ function GenshinCharacterDetails() {
               <div className={style.artifactsLink}>
                 ARTIFACTS:
                 <Link to="/artifacts">Artifacts List</Link>
-                
-              </div><br />
+              </div>
+              <br />
 
               <Link to="/">&#128281;</Link>
               <br />

@@ -7,11 +7,11 @@ function GenshinHeader() {
     // do not forget to use {} pag classname
 
     <>
-    <header>
-      <div className={style.header}>
-        {/* <h1>Genshin Impact</h1> */}
-        <img className={style.image} src={backgroundUrl} alt="background" />
-      </div>
+      <header>
+        <div className={style.header}>
+          {/* <h1>Genshin Impact</h1> */}
+          <img className={style.image} src={backgroundUrl} alt="background" />
+        </div>
       </header>
     </>
   );

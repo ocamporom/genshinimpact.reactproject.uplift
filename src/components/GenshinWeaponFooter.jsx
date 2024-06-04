@@ -47,8 +47,8 @@ function GenshinWeaponFooter() {
           style={{ position: footerPosition }}
         >
           <div className={style.artifactsLink}>
-           <Link to="/">Home</Link>&nbsp;
-            <Link to="/artifacts">Artifacts</Link>  &nbsp;
+            <Link to="/">Home</Link>&nbsp;
+            <Link to="/artifacts">Artifacts</Link> &nbsp;
             <a href="#top">Top</a>
           </div>
           <br />

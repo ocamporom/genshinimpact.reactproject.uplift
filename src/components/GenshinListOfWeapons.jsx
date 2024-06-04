@@ -1,7 +1,14 @@
-import style from './GenshinListOfWeapons.module.css'
-import { Link } from 'react-router-dom';
+import style from "./GenshinListOfWeapons.module.css";
+import { Link } from "react-router-dom";
 
-function GenshinListOfWeapons({ id, type, rarity, subStat, passiveDesc, name,  }) {
+function GenshinListOfWeapons({
+  id,
+  type,
+  rarity,
+  subStat,
+  passiveDesc,
+  name,
+}) {
   const weaponUrl = `https://genshin.jmp.blue/weapons/${id}/icon`;
 
   // console.log("id", id);
@@ -10,16 +17,16 @@ function GenshinListOfWeapons({ id, type, rarity, subStat, passiveDesc, name,  }
   return (
     <div>
       <a id="top" />
-      <div className={style.WeaponsList} >
+      <div className={style.WeaponsList}>
         <img className={style.WeaponImageItself} src={weaponUrl} alt={name} />
         <hr />
         <div>NAME: {name}</div>
         <div>TYPE: {type}</div>
         <div>RARITY: {rarity}</div>
         <div>SUBSTAT: {subStat}</div>
-        <div>DESCRIPTION:  {passiveDesc}</div>
-       <div className={style.BackToTopButton}>
-        {/* <a href="#top">Back to Top</a><br/>
+        <div>DESCRIPTION: {passiveDesc}</div>
+        <div className={style.BackToTopButton}>
+          {/* <a href="#top">Back to Top</a><br/>
         <Link to='/artifacts'>Go to Artifacts&#128255;</Link><br/>
         <Link to='/'>Back to Home</Link> */}
         </div>
@@ -29,11 +36,6 @@ function GenshinListOfWeapons({ id, type, rarity, subStat, passiveDesc, name,  }
 }
 
 export default GenshinListOfWeapons;
-
-
-
-
-
 
 //  async function fetchWeapons() {
 //   const response = await fetch('https://genshin.jmp.blue/weapons/all');
