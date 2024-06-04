@@ -4,6 +4,7 @@ import GenshinListOfWeapons from "../components/GenshinListOfWeapons";
 import GenshinAuthContext from "../contexts/GenshinAuthContext";
 import { useParams } from "react-router-dom";
 import style from './GenshinListOfWeaponPage.module.css';
+import GenshinWeaponFooter from "../components/GenshinWeaponFooter";
 
 function GenshinListOfWeaponspage() {
 
@@ -42,6 +43,8 @@ function GenshinListOfWeaponspage() {
         />
       ))}
       </div>
+      <GenshinWeaponFooter/>
+     
     </>
   );
 }

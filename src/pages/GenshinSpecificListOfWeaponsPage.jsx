@@ -5,6 +5,7 @@ import GenshinAuthContext from '../contexts/GenshinAuthContext';
 import { useEffect } from 'react';
 import style from './GenshinSpecificListOfWeapons.module.css';
 import GenshinSpecificListOfWeapon from '../components/GenshinSpecificListOfWeapon';
+import GenshinWeaponFooter from '../components/GenshinWeaponFooter'
 
 
 
@@ -53,6 +54,8 @@ function GenshinSpecificListOfWeaponsPage() {
         />
       ))}
       </div>
+
+      <GenshinWeaponFooter/>
 
 
   </> );

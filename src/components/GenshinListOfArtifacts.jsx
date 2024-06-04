@@ -58,11 +58,11 @@ function GenshinListOfArtifacts({
         <div>MAX RARITY: {maxRarity}</div>
 
         <div className={style.BackToTopButton2}>
-          <a href="#top">Back to Top</a>
+          {/* <a href="#top">Back to Top</a>
           <br />
           <Link to="/weapons">Go to ALL Weapons&#127919;</Link>
           <br />
-          <Link to="/">Back to Home</Link>
+          <Link to="/">Back to Home</Link> */}
         </div>
       </div>
       </div>

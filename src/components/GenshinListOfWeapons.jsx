@@ -19,9 +19,9 @@ function GenshinListOfWeapons({ id, type, rarity, subStat, passiveDesc, name,  }
         <div>SUBSTAT: {subStat}</div>
         <div>DESCRIPTION:  {passiveDesc}</div>
        <div className={style.BackToTopButton}>
-        <a href="#top">Back to Top</a><br/>
+        {/* <a href="#top">Back to Top</a><br/>
         <Link to='/artifacts'>Go to Artifacts&#128255;</Link><br/>
-        <Link to='/'>Back to Home</Link>
+        <Link to='/'>Back to Home</Link> */}
         </div>
       </div>
     </div>

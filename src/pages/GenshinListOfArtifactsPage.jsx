@@ -3,6 +3,7 @@ import GenshinHeader from "../components/GenshinHeader";
 import GenshinListOfArtifacts from "../components/GenshinListOfArtifacts";
 import GenshinAuthContext from "../contexts/GenshinAuthContext";
 import { useParams } from "react-router-dom";
+import GenshinArtifactsFooter from "../components/GenshinArtifactsFooter";
 
 function GenshinListOfArtifactspage() {
   const params = useParams();
@@ -26,6 +27,7 @@ function GenshinListOfArtifactspage() {
 
   return (
     <>
+    <div>
       <GenshinHeader />
 
       {artifacts.map((artifact, index) => (
@@ -38,6 +40,8 @@ function GenshinListOfArtifactspage() {
           key={index}
         />
       ))}
+       <GenshinArtifactsFooter />
+      </div>
     </>
   );
 }
