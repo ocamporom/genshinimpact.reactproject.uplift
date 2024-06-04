@@ -11,6 +11,8 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 100%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 .WeaponImageItself {
   width: 70px;
