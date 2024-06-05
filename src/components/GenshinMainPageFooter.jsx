@@ -39,7 +39,7 @@ function GenshinArtifactsFooter() {
     <>
       <div className={style.genshinFooter}>
         <div className="content"></div>
-        <a id="top" />
+       
 
         <footer
           id="footer"
@@ -47,9 +47,9 @@ function GenshinArtifactsFooter() {
           style={{ position: footerPosition }}
         >
           <div className={style.artifactsLink}>
-            <Link to="/">"Home"</Link>&nbsp;
+            <Link to="/artifacts">"All-Artifacts"</Link>&nbsp;
             <Link to="/weapons">"All-Weapons"</Link> &nbsp;
-            <a href="#top">"Top"</a>
+            
           </div>
           <br />
         </footer>

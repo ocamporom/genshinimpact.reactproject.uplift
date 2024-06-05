@@ -3,6 +3,7 @@ import GenshinAuthContext from "../contexts/GenshinAuthContext";
 import GenshinHeader from "../components/GenshinHeader";
 import GenshinImage from "../components/GenshinImage";
 import style from "./GenshinMainPage.module.css";
+import GenshinMainPageFooter from '../components/GenshinMainPageFooter'
 
 import GenshinSearchFunctionality from "../components/GenshinSearchFunctionality";
 
@@ -36,7 +37,7 @@ function GenshinMainPage() {
           <GenshinImage name={char.name} key={index} />
         ))}
       </div>
-      
+      <GenshinMainPageFooter/>
     </>
   );
 }

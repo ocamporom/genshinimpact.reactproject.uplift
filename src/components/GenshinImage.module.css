@@ -8,6 +8,8 @@
   border-radius: 9%;
   filter: drop-shadow(2px 2px 13px rgb(151, 12, 12));
   transition: all 2s ease-in-out;
+  /* aspect-ratio: 1/1;
+  overflow: hidden; */
 }
 
 .genshinImageItself:hover{
