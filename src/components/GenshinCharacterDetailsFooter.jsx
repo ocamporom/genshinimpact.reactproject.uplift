@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import style from "./GenshinMainPageFooter.module.css";
+import style from "./GenshinCharacterDetailsFooter.module.css";
 import { Link } from "react-router-dom";
 
-function GenshinMainPageFooter() {
+function GenshinCharacterDetailsFooter() {
   const [footerPosition, setFooterPosition] = useState("fixed");
 
   useEffect(() => {
@@ -39,7 +39,7 @@ function GenshinMainPageFooter() {
     <>
       <div className={style.genshinFooter}>
         <div className="content"></div>
-       
+        <a id="top" />
 
         <footer
           id="footer"
@@ -47,9 +47,11 @@ function GenshinMainPageFooter() {
           style={{ position: footerPosition }}
         >
           <div className={style.artifactsLink}>
-            <Link to="/artifacts">"All-Artifacts"</Link>&nbsp;
+            &nbsp;
+            <Link to="/">"Home"</Link>&nbsp;
             <Link to="/weapons">"All-Weapons"</Link> &nbsp;
-            
+            <Link to="/artifacts">"All-Artifacts"</Link> &nbsp;
+            {/* <a href="#top">"Top"</a> */}
           </div>
           <br />
         </footer>
@@ -58,4 +60,4 @@ function GenshinMainPageFooter() {
   );
 }
 
-export default GenshinMainPageFooter;
+export default GenshinCharacterDetailsFooter;

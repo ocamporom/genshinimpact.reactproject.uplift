@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import style from "./GenshinCharacterDetailsPage.module.css";
+import GenshinCharacterDetailsFooter from "../components/GenshinCharacterDetailsFooter";
 
 const alternateImageMap = {
   "Arataki Itto": "arataki-itto",
@@ -93,6 +94,14 @@ function GenshinCharacterDetails() {
             <p> '{description}'</p>
             <p>TITLE: {title}</p>
             <p>VISION: {vision}</p>
+            <p>WEAPON: <Link
+                  to={`/weapons/specific/${weapon}`}
+                  style={{
+                    pointerEvents: false ? "none" : "unset",
+                  }}
+                >
+                  {weapon} List
+                </Link></p>
             <p>GENDER: {gender}</p>
             <p>NATION: {nation}</p>
             <p>AFFILIATION: {affiliation}</p>
@@ -108,31 +117,35 @@ function GenshinCharacterDetails() {
             >Other Weapon Options&#127919;</Link> <br/>   */}
               {/* <Link to="/weapons">To All Weapons&#127919;</Link> <br/> */}
               </div>
-              <div className={style.weaponLink}>
+
+
+
+              {/* <div className={style.weaponLink}>
                 WEAPON:
-                <Link
+                <p><Link
                   to={`/weapons/specific/${weapon}`}
                   style={{
                     pointerEvents: false ? "none" : "unset",
                   }}
                 >
-                  <p> {weapon} List</p>
-                </Link>
-              </div>
+                  {weapon} List
+                </Link></p>
+              </div> */}
               <br />
 
-              <div className={style.artifactsLink}>
+              {/* <div className={style.artifactsLink}>
                 ARTIFACTS:
                 <Link to="/artifacts">Artifacts List</Link>
-              </div>
-              <br />
+              </div> */}
+              {/* <br />
 
               <Link to="/">&#128281;</Link>
               <br />
-            
+             */}
           </div>
         </div>
       </div>
+      <GenshinCharacterDetailsFooter/>
     </>
   );
 }
