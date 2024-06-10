@@ -5,6 +5,7 @@ import GenshinAuthContext from "../contexts/GenshinAuthContext";
 import { useParams } from "react-router-dom";
 import style from './GenshinListOfWeaponPage.module.css';
 import GenshinWeaponFooter from "../components/GenshinWeaponFooter";
+import GenshinWeaponSearchFunctionality from '../components/GenshinWeaponSearchFunctionality'
 
 function GenshinListOfWeaponspage() {
 
@@ -12,15 +13,21 @@ function GenshinListOfWeaponspage() {
   const name = params.name;
   // console.log(name);
   
-  const { weapons, setWeapons } = useContext(GenshinAuthContext);
+  // const { weapons, setWeapons } = useContext(GenshinAuthContext);
   // const [weapons, setWeapons] = useState([]);
+  // const {state: {weapons}, dispatch} = useContext(GenshinAuthContext);
+  const {stateWeapons, dispatchWeapons} = useContext(GenshinAuthContext);
+
 
   const fetchWeapons = async () => {
     const response = await fetch(`https://genshin.jmp.blue/weapons/all?`);
     const json = await response.json();
 
     console.log("json", json);
-    setWeapons(json);
+    dispatchWeapons({
+      type: "ADD_WEAPONS",
+      payload: json,
+    });
   };
 
   useEffect(() => {
@@ -30,8 +37,9 @@ function GenshinListOfWeaponspage() {
   return (
     <>
       <GenshinHeader />
+      <GenshinWeaponSearchFunctionality />
       <div className={style.allWeapons}>
-      {weapons.map((weapon, index) => ( //slice lang na add 060224 1113H
+      {stateWeapons.weapons.map((weapon, index) => ( //slice lang na add 060224 1113H
         <GenshinListOfWeapons
           id={weapon.id}
           type={weapon.type}

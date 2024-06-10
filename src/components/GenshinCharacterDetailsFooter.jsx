@@ -48,9 +48,9 @@ function GenshinCharacterDetailsFooter() {
         >
           <div className={style.artifactsLink}>
             &nbsp;
-            <Link to="/">"Home"</Link>&nbsp;
-            <Link to="/weapons">"All-Weapons"</Link> &nbsp;
-            <Link to="/artifacts">"All-Artifacts"</Link> &nbsp;
+            <Link to="/">Home</Link>&nbsp;
+            <Link to="/weapons">All-Weapons</Link> &nbsp;
+            <Link to="/artifacts">All-Artifacts</Link> &nbsp;
             {/* <a href="#top">"Top"</a> */}
           </div>
           <br />

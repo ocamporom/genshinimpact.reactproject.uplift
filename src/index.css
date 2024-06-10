@@ -15,7 +15,7 @@
 
 a{
   color: rgb(18, 7, 1);
-  text-decoration: none;
+ 
   font-size: larger;
   transition: font-size 0.3s ease-in-out;
   background-color: rgba(93, 137, 175, 0);

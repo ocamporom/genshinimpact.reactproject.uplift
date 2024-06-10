@@ -28,7 +28,9 @@ function GenshinImage({ name }) {
       >
         <div className={style.genshinContainer}>
           {/*ito ung labasan ng lahat ng characters! */}
+          <div className={style.genshinImageItselfContainer}>
           <img className={style.genshinImageItself} src={imgUrl} alt={name} />
+          </div>
           <h2 className={style.characterName}>{name}</h2>
         </div>
       </Link>

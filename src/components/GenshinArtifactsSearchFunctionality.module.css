@@ -1,0 +1,20 @@
+.searchFieldContainer{
+  color: rgb(224, 10, 10);
+  text-align: center;
+}
+.searchField{
+  color: rgb(1 12 17);
+  font-size: x-large;
+  width: auto;
+  background-color: rgb(246 246 246);
+  border-radius: 4%;
+  margin-bottom: 18px;
+  text-align: center;
+  height: 29px;
+}
+.searchButton{
+ 
+  color: black;
+  height: 32px;
+  background-color: #ffff;
+}

@@ -4,22 +4,28 @@ import GenshinListOfArtifacts from "../components/GenshinListOfArtifacts";
 import GenshinAuthContext from "../contexts/GenshinAuthContext";
 import { useParams } from "react-router-dom";
 import GenshinArtifactsFooter from "../components/GenshinArtifactsFooter";
+import GenshinArtifactsSearchFunctionality from "../components/GenshinArtifactsSearchFunctionality"
 
 function GenshinListOfArtifactspage() {
   const params = useParams();
   const name = params.name;
   // console.log(name);
 
-  const { artifacts, setArtifacts } = useContext(GenshinAuthContext);
+  // const { artifacts, setArtifacts } = useContext(GenshinAuthContext);
 
+  const {stateArtifacts, dispatchArtifacts} = useContext(GenshinAuthContext);
 
   const fetchArtifacts = async () => {
     const response = await fetch(`https://genshin.jmp.blue/artifacts/all?`);
     const json = await response.json();
 
     console.log("json", json);
-    setArtifacts(json);
-  };
+    // setArtifacts(json);
+    dispatchArtifacts({
+      type: "ADD_ARTIFACTS",
+      payload: json,
+  });
+}
 
   useEffect(() => {
     fetchArtifacts();
@@ -29,8 +35,9 @@ function GenshinListOfArtifactspage() {
     <>
     <div>
       <GenshinHeader />
+      <GenshinArtifactsSearchFunctionality />
 
-      {artifacts.map((artifact, index) => (
+      {stateArtifacts.artifacts.map((artifact, index) => (
         <GenshinListOfArtifacts
           id={artifact.id}
           maxRarity={artifact.max_rarity}

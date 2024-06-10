@@ -1,26 +1,27 @@
-import { useEffect, useContext, useState } from "react";
+import { useEffect, useContext, useState, useReducer } from "react";
 import GenshinAuthContext from "../contexts/GenshinAuthContext";
 import GenshinHeader from "../components/GenshinHeader";
 import GenshinImage from "../components/GenshinImage";
 import style from "./GenshinMainPage.module.css";
-import GenshinMainPageFooter from '../components/GenshinMainPageFooter'
-
-import GenshinSearchFunctionality from "../components/GenshinSearchFunctionality";
+import GenshinMainPageFooter from "../components/GenshinMainPageFooter";
+import useGenshinAuthContextReducer from "../contexts/GenshinAuthContextReducer";
+import GenshinCharacterSearchFunctionality from "../components/GenshinCharacterSearchFunctionality";
 
 function GenshinMainPage() {
-  // ito ung PAGE na maraming characters.! so kuhain muna ung kembot ng mga pictures!
-  // const [characters, setCharacters] = useState([]);
+  // const {characters, setCharacters} = useReducer(useGenshinAuthContextReducer); //desctructure ng mga state at setter tpus pasa me itang authcontext kilub usecontext
 
-  const {characters, setCharacters} = useContext(GenshinAuthContext); //desctructure ng mga state at setter tpus pasa me itang authcontext kilub usecontext
-   console.log('context na ito pag lumitaw', typeof characters)
-
+  const { stateCharacters, dispatchCharacters } = useContext(GenshinAuthContext);
+  // const {state: {characters}} =  useContext(GenshinAuthContext);
 
   const fetchGenshinData = async () => {
     const response = await fetch(`https://genshin.jmp.blue/characters/all`);
     const json = await response.json();
 
-    console.log(json);
-    setCharacters(json);
+    // console.log(json);
+    dispatchCharacters({
+      type: "ADD_CHARACTERS",
+      payload: json,
+    });
   };
 
   useEffect(() => {
@@ -30,14 +31,14 @@ function GenshinMainPage() {
   return (
     <>
       <GenshinHeader />
-      <GenshinSearchFunctionality />
+      <GenshinCharacterSearchFunctionality />
 
       <div className={style.characters}>
-        {characters.map((char, index) => (
+        {stateCharacters.characters.map((char, index) => (
           <GenshinImage name={char.name} key={index} />
         ))}
       </div>
-      <GenshinMainPageFooter/>
+      <GenshinMainPageFooter />
     </>
   );
 }
