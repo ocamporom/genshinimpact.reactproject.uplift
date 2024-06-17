@@ -2,42 +2,40 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import GenshinMainPage from "./pages/GenshinMainPage";
 import GenshinCharacterDetails from "./pages/GenshinCharacterDetailsPage";
 import GenshinListOfWeaponsPage from "./pages/GenshinListOfWeaponsPage";
-// import GenshinAuthContext from "./contexts/GenshinAuthContext";
+
 import GenshinAuthProvider from "./contexts/GenshinAuthProvider";
 import GenshinListOfArtifactspage from "./pages/GenshinListOfArtifactsPage";
-import GenshinSpecificListOfWeaponsPage from "./pages/GenshinSpecificListOfWeaponsPage"
-
+import GenshinSpecificListOfWeaponsPage from "./pages/GenshinSpecificListOfWeaponsPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <GenshinMainPage />, //ito ang main pag na selection ng characters.
+    element: <GenshinMainPage />,
   },
   {
-    path: "/characters/:name", // dito kukunin ung buong details nila..oneng dun sa API ng genshin,,wala sya property so first word nangyari..
-    //do not forget ung :
+    path: "/characters/:name",
     element: <GenshinCharacterDetails />,
   },
   {
     path: "/weapons",
     element: <GenshinListOfWeaponsPage />,
-  }, ///last added 052924
+  },
   {
     path: "/artifacts",
     element: <GenshinListOfArtifactspage />,
   },
   {
-    path: "/weapons/specific/:name", // KEBIT KE KNI ITANG VARIABLE A WEAPON FOR THE LINK BANG LUNTO YAMU ITANG PAYTUNAN MUNG TYPE AS PER THE CHARACTER!!
-    element: <GenshinSpecificListOfWeaponsPage />, //ADDED 060224
+    path: "/weapons/specific/:name",
+    element: <GenshinSpecificListOfWeaponsPage />,
   },
 ]);
 
 function App() {
   return (
     <>
-     <GenshinAuthProvider>
-      <RouterProvider router={router} />
-    </GenshinAuthProvider>
+      <GenshinAuthProvider>
+        <RouterProvider router={router} />
+      </GenshinAuthProvider>
     </>
   );
 }

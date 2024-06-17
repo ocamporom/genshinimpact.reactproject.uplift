@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import fallbackImage from "../assets/paimon.png";
 
 import style from "./GenshinCharacterDetailsPage.module.css";
 import GenshinCharacterDetailsFooter from "../components/GenshinCharacterDetailsFooter";
@@ -59,7 +60,7 @@ function GenshinCharacterDetails() {
     character === undefined ? "Loading..." : character.affiliation;
   const description =
     character === undefined ? "Loading..." : character.description;
-  // const weapon = true ? "Loading..." : character.weapon;
+
   const weapon = character === undefined ? "Loading..." : character.weapon;
   const vision = character === undefined ? "Loading..." : character.vision;
   const rarity = character === undefined ? "Loading..." : character.rarity;
@@ -68,10 +69,6 @@ function GenshinCharacterDetails() {
   const nation = character === undefined ? "Loading..." : character.nation;
   const constellation =
     character === undefined ? "Loading..." : character.constellation;
-  // const rarity = character === undefined ? "Loading..." : character.rarity;
-  // const rarity = character === undefined ? "Loading..." : character.rarity;
-
-  // const talents = character === undefined ? "Loading..." : character.skillTalents[name];
 
   return (
     <>
@@ -81,7 +78,13 @@ function GenshinCharacterDetails() {
         </div>
         <hr />
         <div className={style.imageDetails}>
-          <img src={imgUrl} alt={name} />
+          <img
+            src={imgUrl}
+            alt={name}
+            onError={(e) => {
+              e.target.src = fallbackImage; // Set fallback image on error
+            }}
+          />
         </div>
         <div className={style.CharacterInformation}>
           <hr />
@@ -94,14 +97,17 @@ function GenshinCharacterDetails() {
             <p> '{description}'</p>
             <p>TITLE: {title}</p>
             <p>VISION: {vision}</p>
-            <p>WEAPON: <Link
-                  to={`/weapons/specific/${weapon}`}
-                  style={{
-                    pointerEvents: false ? "none" : "unset",
-                  }}
-                >
-                  {weapon} List
-                </Link></p>
+            <p>
+              WEAPON:{" "}
+              <Link
+                to={`/weapons/specific/${weapon}`}
+                style={{
+                  pointerEvents: false ? "none" : "unset",
+                }}
+              >
+                {weapon} List
+              </Link>
+            </p>
             <p>GENDER: {gender}</p>
             <p>NATION: {nation}</p>
             <p>AFFILIATION: {affiliation}</p>
@@ -109,43 +115,12 @@ function GenshinCharacterDetails() {
             <p>CONSTELLATION: {constellation}</p>
 
             <div className={style.backButton}>
-              {/* <Link to={`/weapons/specific/${weapon}`}
-              style={{
-                pointerEvents: false ? 'none': 'unset'
-              }}
-            
-            >Other Weapon Options&#127919;</Link> <br/>   */}
               {/* <Link to="/weapons">To All Weapons&#127919;</Link> <br/> */}
-              </div>
-
-
-
-              {/* <div className={style.weaponLink}>
-                WEAPON:
-                <p><Link
-                  to={`/weapons/specific/${weapon}`}
-                  style={{
-                    pointerEvents: false ? "none" : "unset",
-                  }}
-                >
-                  {weapon} List
-                </Link></p>
-              </div> */}
-              <br />
-
-              {/* <div className={style.artifactsLink}>
-                ARTIFACTS:
-                <Link to="/artifacts">Artifacts List</Link>
-              </div> */}
-              {/* <br />
-
-              <Link to="/">&#128281;</Link>
-              <br />
-             */}
+            </div>
           </div>
         </div>
       </div>
-      <GenshinCharacterDetailsFooter/>
+      <GenshinCharacterDetailsFooter />
     </>
   );
 }

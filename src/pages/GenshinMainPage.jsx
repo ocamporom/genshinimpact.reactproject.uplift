@@ -4,14 +4,12 @@ import GenshinHeader from "../components/GenshinHeader";
 import GenshinImage from "../components/GenshinImage";
 import style from "./GenshinMainPage.module.css";
 import GenshinMainPageFooter from "../components/GenshinMainPageFooter";
-import useGenshinAuthContextReducer from "../contexts/GenshinAuthContextReducer";
 import GenshinCharacterSearchFunctionality from "../components/GenshinCharacterSearchFunctionality";
+// import backGroundMusic from '../assets/genshinOST.mp3'
 
 function GenshinMainPage() {
-  // const {characters, setCharacters} = useReducer(useGenshinAuthContextReducer); //desctructure ng mga state at setter tpus pasa me itang authcontext kilub usecontext
-
-  const { stateCharacters, dispatchCharacters } = useContext(GenshinAuthContext);
-  // const {state: {characters}} =  useContext(GenshinAuthContext);
+  const { stateCharacters, dispatchCharacters } =
+    useContext(GenshinAuthContext);
 
   const fetchGenshinData = async () => {
     const response = await fetch(`https://genshin.jmp.blue/characters/all`);
@@ -30,6 +28,14 @@ function GenshinMainPage() {
 
   return (
     <>
+      {/* <div>
+      <audio autoPlay>
+        <source src={backGroundMusic} type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+     
+    </div> */}
+
       <GenshinHeader />
       <GenshinCharacterSearchFunctionality />
 

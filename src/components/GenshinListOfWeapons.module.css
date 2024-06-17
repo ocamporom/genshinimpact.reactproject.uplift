@@ -4,8 +4,8 @@
   border-style: inset;
   text-align: center;
   border-radius: 2%;
-  margin-right: auto;
-  margin-left: auto;
+  /* margin-right: auto;
+  margin-left: auto; */
   margin-bottom: 10px;
   background-image: url(/src/assets/weaponsbg1.jpeg);
   background-repeat: no-repeat;
@@ -17,6 +17,16 @@
 .WeaponImageItself {
   width: 70px;
   filter: drop-shadow(2px 2px 13px rgb(214, 171, 171));
+}
+.weaponDescription {
+  text-overflow: ellipsis;
+  white-space: wrap;
+  /* overflow: hidden; */
+}
+.weaponName {
+  color: #673ab7;
+  font-size: x-large;
+  font-family: sans-serif;
 }
 .BackToTopButton {
   text-decoration: none;

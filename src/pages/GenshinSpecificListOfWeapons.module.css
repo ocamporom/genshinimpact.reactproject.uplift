@@ -1,13 +1,14 @@
 .allSpecificWeapons {
   color: aliceblue;
 
-  width: auto;
+  /* width: auto; */
 }
 
 @media (width >= 768px) {
-  .allWeapons {
+  .allSpecificWeapons {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(8, auto);
+    gap: 1rem;
+   
   }
 }

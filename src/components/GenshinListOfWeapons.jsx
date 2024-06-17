@@ -1,5 +1,5 @@
 import style from "./GenshinListOfWeapons.module.css";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function GenshinListOfWeapons({
   id,
@@ -7,73 +7,45 @@ function GenshinListOfWeapons({
   rarity,
   subStat,
   passiveDesc,
+  ascensionMaterial,
+  location,
   name,
 }) {
   const weaponUrl = `https://genshin.jmp.blue/weapons/${id}/icon`;
+  const [weaponsUrl, setWeaponUrl] = useState(`${weaponUrl}`);
 
-  // console.log("id", id);
-  // console.log("name", name);
+  const handleImageError = () => {
+    // Logic to handle image loading error
+    setWeaponUrl("../assets/fallback-image.png");
+  };
 
   return (
     <div>
       <a id="top" />
       <div className={style.WeaponsList}>
-        <img className={style.WeaponImageItself} src={weaponUrl} alt={name} />
+        <img
+          className={style.WeaponImageItself}
+          src={weaponsUrl}
+          alt={name}
+          onError={handleImageError}
+        />
+
+        <div className={style.weaponName}>"{name}"</div>
         <hr />
-        <div>NAME: {name}</div>
         <div>TYPE: {type}</div>
         <div>RARITY: {rarity}</div>
         <div>SUBSTAT: {subStat}</div>
-        <div>DESCRIPTION: {passiveDesc}</div>
-        <div className={style.BackToTopButton}>
-          {/* <a href="#top">Back to Top</a><br/>
-        <Link to='/artifacts'>Go to Artifacts&#128255;</Link><br/>
-        <Link to='/'>Back to Home</Link> */}
+        <div>LOCATION: {location}</div>
+        <div>ASCENSION MATERIAL: {ascensionMaterial}</div>
+        <hr/>
+        <div className={style.weaponDescription}>
+          "{passiveDesc}""
         </div>
+        
+        <div className={style.BackToTopButton}></div>
       </div>
     </div>
   );
 }
 
 export default GenshinListOfWeapons;
-
-//  async function fetchWeapons() {
-//   const response = await fetch('https://genshin.jmp.blue/weapons/all');
-//   const json = await response.json(); // Array of weapon item object
-//                                                                // 👇 Depende kung anong paano mo nakukuha yung character
-//   const filteredWeapons = json.filter((weapon) => weapon.type === currentCharacter.weapon);
-
-//   setWeapons(filteredWeapons);
-// }
-
-{
-  /* const weapon = character === undefined ? "Loading..." : character.weapon;
-      <div className={style.WeaponList}>
-        <img src={weapons} alt={weapon} />
-        <p>{weapon}</p>
-       
-
-      </div> */
-}
-
-//   const[weapons, setWeapons] = useState()
-
-//   async function fetchWeapons() {//diretso filter na ito so ilabas mo sya sa baba
-//    // 👇 Depende kung anong paano mo nakukuha yung character
-//  const response = await fetch(`https://genshin.jmp.blue/weapons/all?type=${character.weapon}`);
-//  const json = await response.json(); // Array of weapon item object
-
-//  setWeapons(json);
-//  }
-
-//  // useEffect(() => {
-//  //   fetchWeapons();
-//  // }, []);
-
-//  useEffect(() => {
-//    if (character) {
-//      fetchWeapons();
-//    }
-//  }, [character]);
-
-//  const weapon = character === undefined ? "Loading..." : character.weapon;

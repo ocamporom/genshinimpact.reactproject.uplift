@@ -11,11 +11,7 @@ function GenshinListOfWeaponspage() {
 
   const params = useParams();
   const name = params.name;
-  // console.log(name);
-  
-  // const { weapons, setWeapons } = useContext(GenshinAuthContext);
-  // const [weapons, setWeapons] = useState([]);
-  // const {state: {weapons}, dispatch} = useContext(GenshinAuthContext);
+ 
   const {stateWeapons, dispatchWeapons} = useContext(GenshinAuthContext);
 
 
@@ -39,7 +35,7 @@ function GenshinListOfWeaponspage() {
       <GenshinHeader />
       <GenshinWeaponSearchFunctionality />
       <div className={style.allWeapons}>
-      {stateWeapons.weapons.map((weapon, index) => ( //slice lang na add 060224 1113H
+      {stateWeapons.weapons.map((weapon) => ( 
         <GenshinListOfWeapons
           id={weapon.id}
           type={weapon.type}
@@ -47,7 +43,9 @@ function GenshinListOfWeaponspage() {
           subStat={weapon.subStat}
           passiveDesc={weapon.passiveDesc}
           name={weapon.name}
-          key={index}
+          ascensionMaterial={weapon.ascensionMaterial}
+          location={weapon.location}
+          key={weapon.id}
         />
       ))}
       </div>
@@ -60,12 +58,3 @@ function GenshinListOfWeaponspage() {
 export default GenshinListOfWeaponspage;
 
 
-// {artifacts.map((artifact, index) => (
-//   <GenshinListOfArtifacts
-//      id={artifact.id}
-//      maxRarity={artifact.max_rarity}
-//      name={artifact.name}
-//      twoPieceBonus={artifact['2-piece_bonus']}
-//      fourPieceBonus={artifact['4-piece_bonus']}
-//      key={index} />
-// )}

@@ -10,23 +10,23 @@ function GenshinMainPageFooter() {
       const footer = document.getElementById("footer");
       const content = document.querySelector(".content");
 
-      // Calculate if the content height is shorter than the viewport height
+      
       const isShorterThanViewport = content.clientHeight < window.innerHeight;
 
       if (!isShorterThanViewport) {
-        // If content is longer than viewport, make the footer follow scroll
+       
         const scrollableHeight = content.scrollHeight - window.innerHeight;
         const scrolledRatio = window.scrollY / scrollableHeight;
         const footerHeight = footer.offsetHeight;
 
-        // Calculate the position of the footer based on scroll position
+    
         const newPosition = Math.min(
           scrolledRatio * scrollableHeight,
           scrollableHeight - footerHeight
         );
         setFooterPosition(newPosition + "px");
       } else {
-        // If content is shorter than viewport, fix footer to bottom
+    
         setFooterPosition("0");
       }
     }

@@ -15,6 +15,11 @@
   filter: drop-shadow(2px 2px 13px rgb(214, 171, 171));
   width: 70px;
 }
+.artifactsName{
+  color: blueviolet;
+  font-size: x-large;
+  font-family: sans-serif;
+}
 .BackToTopButton2 {
   text-decoration: none;
   font-size: larger;

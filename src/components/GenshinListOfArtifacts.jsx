@@ -1,5 +1,6 @@
 import style from "./GenshinListOfArtifacts.module.css";
 import { Link } from "react-router-dom";
+import fallbackImage from '../assets/paimon.png'
 
 function GenshinListOfArtifacts({
   id,
@@ -8,9 +9,7 @@ function GenshinListOfArtifacts({
   twoPieceBonus,
   fourPieceBonus,
 }) {
-  //  const [imgInfo, setImgInfo] = useState({
 
-  //  })
 
   const artifactsUrl = `https://genshin.jmp.blue/artifacts/${id}/circlet-of-logos`;
   const artifactsUrl2 = `https://genshin.jmp.blue/artifacts/${id}/flower-of-life`;
@@ -27,29 +26,45 @@ function GenshinListOfArtifacts({
             className={style.ArtifactsImageItself}
             src={artifactsUrl}
             alt={name}
+            onError={(e) => {
+              e.target.src = fallbackImage; // Set fallback image on error
+            }}
           />
           <img
             className={style.ArtifactsImageItself}
             src={artifactsUrl2}
             alt={name}
+            onError={(e) => {
+              e.target.src = fallbackImage; // Set fallback image on error
+            }}
           />
           <img
             className={style.ArtifactsImageItself}
             src={artifactsUrl3}
             alt={name}
+            onError={(e) => {
+              e.target.src = fallbackImage; // Set fallback image on error
+            }}
           />
           <img
             className={style.ArtifactsImageItself}
             src={artifactsUrl4}
             alt={name}
+            onError={(e) => {
+              e.target.src = fallbackImage; // Set fallback image on error
+            }}
           />
           <img
             className={style.ArtifactsImageItself}
             src={artifactsUrl5}
             alt={name}
+            onError={(e) => {
+              e.target.src = fallbackImage; // Set fallback image on error
+            }}
           />
+        
+          <div className={style.artifactsName}>"{name}"</div>
           <hr />
-          <div>NAME: {name}</div>
           <div>2-PIECE-BONUS: {twoPieceBonus}</div>
           <div>4-PIECE-BONUS: {fourPieceBonus}</div>
 
@@ -70,43 +85,3 @@ function GenshinListOfArtifacts({
 
 export default GenshinListOfArtifacts;
 
-//  async function fetchWeapons() {
-//   const response = await fetch('https://genshin.jmp.blue/weapons/all');
-//   const json = await response.json(); // Array of weapon item object
-//                                                                // 👇 Depende kung anong paano mo nakukuha yung character
-//   const filteredWeapons = json.filter((weapon) => weapon.type === currentCharacter.weapon);
-
-//   setWeapons(filteredWeapons);
-// }
-
-{
-  /* const weapon = character === undefined ? "Loading..." : character.weapon;
-      <div className={style.WeaponList}>
-        <img src={weapons} alt={weapon} />
-        <p>{weapon}</p>
-       
-
-      </div> */
-}
-
-//   const[weapons, setWeapons] = useState()
-
-//   async function fetchWeapons() {//diretso filter na ito so ilabas mo sya sa baba
-//    // 👇 Depende kung anong paano mo nakukuha yung character
-//  const response = await fetch(`https://genshin.jmp.blue/weapons/all?type=${character.weapon}`);
-//  const json = await response.json(); // Array of weapon item object
-
-//  setWeapons(json);
-//  }
-
-//  // useEffect(() => {
-//  //   fetchWeapons();
-//  // }, []);
-
-//  useEffect(() => {
-//    if (character) {
-//      fetchWeapons();
-//    }
-//  }, [character]);
-
-//  const weapon = character === undefined ? "Loading..." : character.weapon;

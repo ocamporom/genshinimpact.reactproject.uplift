@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 const defaultValue = {
  characters : [],
- weapons : [], //kunin mo lahat ng state variable dito na gusto mong maging global
+ weapons : [], 
  artifacts : []  
 }
 

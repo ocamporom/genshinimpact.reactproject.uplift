@@ -1,0 +1,12 @@
+/* .weaponDescription{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+} */
+
+.weaponName {
+  color: #673ab7;
+  font-size: x-large;
+  font-family: sans-serif;
+}
