@@ -26,7 +26,7 @@ function GenshinCharacterSearchFunctionality() {
           type="search"
           onChange={handleOnChange}
           value={artifactsName}
-          placeholder="Search name here.."
+          placeholder="Search Artifact here.."
         />
         <button className={style.searchButton} onClick={handleOnClick}>
           Search

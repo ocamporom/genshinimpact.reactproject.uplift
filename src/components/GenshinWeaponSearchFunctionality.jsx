@@ -26,7 +26,7 @@ function GenshinCharacterSearchFunctionality() {
           type="search"
           onChange={handleOnChange}
           value={weaponName}
-          placeholder="Search name here.."
+          placeholder="Search Weapon here.."
         />
         <button className={style.searchButton} onClick={handleOnClick}>
           Search
