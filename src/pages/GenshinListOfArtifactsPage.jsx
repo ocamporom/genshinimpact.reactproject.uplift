@@ -13,7 +13,8 @@ function GenshinListOfArtifactspage() {
   const { stateArtifacts, dispatchArtifacts } = useContext(GenshinAuthContext);
 
   const fetchArtifacts = async () => {
-    const response = await fetch(`https://genshin.jmp.blue/artifacts/all?`);
+    // const response = await fetch(`https://genshin.jmp.blue/artifacts/all?`);
+    const response = await fetch(`http://localhost:3000/artifacts`);
     const json = await response.json();
 
     console.log("json", json);
@@ -37,6 +38,11 @@ function GenshinListOfArtifactspage() {
         {stateArtifacts.artifacts.map((artifact, index) => (
           <GenshinListOfArtifacts
             id={artifact.id}
+            artifactUrl1={artifact.artifactUrl1}
+            artifactUrl2={artifact.artifactUrl2}
+            artifactUrl3={artifact.artifactUrl3}
+            artifactUrl4={artifact.artifactUrl4}
+            artifactUrl5={artifact.artifactUrl5}
             maxRarity={artifact.max_rarity}
             name={artifact.name}
             twoPieceBonus={artifact["2-piece_bonus"]}

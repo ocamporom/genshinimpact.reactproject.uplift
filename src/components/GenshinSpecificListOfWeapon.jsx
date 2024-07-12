@@ -1,7 +1,7 @@
 import style from "./GenshinListOfWeapons.module.css";
 
 function GenshinSpecificListOfWeapons({
-  id,
+  weaponUrl,
   type,
   rarity,
   subStat,
@@ -10,7 +10,7 @@ function GenshinSpecificListOfWeapons({
   ascensionMaterial,
   name,
 }) {
-  const weaponUrl = `https://genshin.jmp.blue/weapons/${id}/icon`;
+  // const weaponUrl = `https://genshin.jmp.blue/weapons/${id}/icon`;
 
   return (
     <>

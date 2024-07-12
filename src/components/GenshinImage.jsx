@@ -5,21 +5,23 @@ import { useState } from "react";
 import fallBackImage from '../assets/paimon.png'
 
 
-function GenshinImage({ name }) {
-  const slug = alternateImageMap[name]
-    ? alternateImageMap[name]
-    : name.toLowerCase();
+function GenshinImage({ name, imageUrl }) {
+  // const slug = alternateImageMap[name]
+  //   ? alternateImageMap[name]
+  //   : name.toLowerCase();
 
-  const imgUrl =
-    name === "Traveler"
-      ? "https://assetsio.gnwcdn.com/genshin-impact-traveler.jpg?width=880&quality=80&format=jpg&auto=webp"
-      : `https://genshin.jmp.blue/characters/${slug}/card`;
+  // const imgUrl =
+  //   name === "Traveler"
+  //     ? "https://assetsio.gnwcdn.com/genshin-impact-traveler.jpg?width=880&quality=80&format=jpg&auto=webp"
+  //     : `https://genshin.jmp.blue/characters/${slug}/card`;
 
   //     const [imageUrl, setImageUrl] = useState(`${imgUrl}`);
 
   // const handleImageError = () => {
   //   // Logic to handle image loading error
   //   setImageUrl('../assets/fallback-image.png');
+
+  
 
   return (
     <>
@@ -33,7 +35,7 @@ function GenshinImage({ name }) {
           <div className={style.genshinImageItselfContainer}>
             <img
               className={style.genshinImageItself}
-              src={imgUrl}
+              src={imageUrl}
               alt={name}
               // style={{objectFit:'contain'}}
               // onError={handleImageError}

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import style from "./GenshinWeaponFooter.module.css";
+import style from "./GenshinArtifactsFooter.module.css";
 import { Link } from "react-router-dom";
 
-function GenshinWeaponFooter() {
+function GenshinVideoFooter() {
   const [footerPosition, setFooterPosition] = useState("fixed");
 
   useEffect(() => {
@@ -45,7 +45,8 @@ function GenshinWeaponFooter() {
           <div className={style.artifactsLink}>
             <Link to="/">Home</Link>&nbsp;
             <Link to="/artifacts">All-Artifacts</Link> &nbsp;
-            <Link to="/videos">All-Videos</Link> &nbsp;
+            <Link to="/weapons">All-Weapons</Link> &nbsp;
+            
             <a href="#top">Top</a>
           </div>
           <br />
@@ -55,4 +56,4 @@ function GenshinWeaponFooter() {
   );
 }
 
-export default GenshinWeaponFooter;
+export default GenshinVideoFooter;

@@ -15,7 +15,8 @@ function GenshinSpecificListOfWeaponsPage() {
     useContext(GenshinAuthContext);
 
   const fetchWeapons = async () => {
-    const response = await fetch(`https://genshin.jmp.blue/weapons/all?`);
+    // const response = await fetch(`https://genshin.jmp.blue/weapons/all?`);
+    const response = await fetch(`http://localhost:3000/weapons`);
     const json = await response.json();
 
     dispatchSpecificWeapons({
@@ -47,6 +48,7 @@ function GenshinSpecificListOfWeaponsPage() {
             name={weapon.name}
             ascensionMaterial={weapon.ascensionMaterial}
             location={weapon.location}
+            weaponUrl={weapon.weaponUrl}
             key={index}
           />
         ))}

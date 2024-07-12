@@ -44,11 +44,12 @@ function GenshinCharacterDetails() {
   const fetchGenshinData = async () => {
     //eto ung description nila sa baba
     const response = await fetch(
-      `https://genshin.jmp.blue/characters/${slug}?`
+      `https://genshin.jmp.blue/characters/${slug}?`     
+      // "http://localhost:3000/videos"
     );
     const json = await response.json();
 
-    console.log(json);
+    // console.log(json);
     setCharacter(json);
   };
 

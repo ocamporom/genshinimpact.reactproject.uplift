@@ -2,7 +2,7 @@ import style from "./GenshinListOfWeapons.module.css";
 import { useState } from "react";
 
 function GenshinListOfWeapons({
-  id,
+  weaponUrl,
   type,
   rarity,
   subStat,
@@ -10,8 +10,9 @@ function GenshinListOfWeapons({
   ascensionMaterial,
   location,
   name,
+
 }) {
-  const weaponUrl = `https://genshin.jmp.blue/weapons/${id}/icon`;
+  // const weaponUrl = `https://genshin.jmp.blue/weapons/${id}/icon`;
   const [weaponsUrl, setWeaponUrl] = useState(`${weaponUrl}`);
 
   const handleImageError = () => {
@@ -25,8 +26,9 @@ function GenshinListOfWeapons({
       <div className={style.WeaponsList}>
         <img
           className={style.WeaponImageItself}
-          src={weaponsUrl}
+          src={weaponUrl}
           alt={name}
+          
           onError={handleImageError}
         />
 

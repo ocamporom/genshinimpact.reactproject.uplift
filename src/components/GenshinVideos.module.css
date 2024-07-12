@@ -1,0 +1,34 @@
+.videoName{
+  /* text-align: center; */
+  color: aliceblue;
+  font-size: x-large;
+  
+}
+.videoIframe{
+
+  text-align: center;
+  filter: drop-shadow(2px 2px 13px rgb(214, 171, 171));
+  
+}
+
+/* .gridVideos{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+ 
+  gap: 2rem;
+} */
+
+.video {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

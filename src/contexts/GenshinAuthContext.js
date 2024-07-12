@@ -4,6 +4,7 @@ const defaultValue = {
  characters : [],
  weapons : [], 
  artifacts : []  
+ 
 }
 
 const GenshinAuthContext = createContext(defaultValue);

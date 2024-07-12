@@ -1,21 +1,24 @@
 import style from "./GenshinListOfArtifacts.module.css";
 import { Link } from "react-router-dom";
-import fallbackImage from '../assets/paimon.png'
+import fallbackImage from "../assets/paimon.png";
 
 function GenshinListOfArtifacts({
-  id,
-  maxRarity,
+  artifactUrl1,
+  artifactUrl2,
+  artifactUrl3,
+  artifactUrl4,
+  artifactUrl5,
+ 
   name,
+  maxRarity,
   twoPieceBonus,
   fourPieceBonus,
 }) {
-
-
-  const artifactsUrl = `https://genshin.jmp.blue/artifacts/${id}/circlet-of-logos`;
-  const artifactsUrl2 = `https://genshin.jmp.blue/artifacts/${id}/flower-of-life`;
-  const artifactsUrl3 = `https://genshin.jmp.blue/artifacts/${id}/goblet-of-eonothem`;
-  const artifactsUrl4 = `https://genshin.jmp.blue/artifacts/${id}/plume-of-death`;
-  const artifactsUrl5 = `https://genshin.jmp.blue/artifacts/${id}/sands-of-eon`;
+  // const artifactsUrl1 = `https://genshin.jmp.blue/artifacts/${id}/circlet-of-logos`;
+  // const artifactsUrl2 = `https://genshin.jmp.blue/artifacts/${id}/flower-of-life`;
+  // const artifactsUrl3 = `https://genshin.jmp.blue/artifacts/${id}/goblet-of-eonothem`;
+  // const artifactsUrl4 = `https://genshin.jmp.blue/artifacts/${id}/plume-of-death`;
+  // const artifactsUrl5 = `https://genshin.jmp.blue/artifacts/${id}/sands-of-eon`;
 
   return (
     <>
@@ -24,7 +27,7 @@ function GenshinListOfArtifacts({
         <div className={style.ArtifactsList}>
           <img
             className={style.ArtifactsImageItself}
-            src={artifactsUrl}
+            src={artifactUrl1} // former
             alt={name}
             onError={(e) => {
               e.target.src = fallbackImage; // Set fallback image on error
@@ -32,7 +35,7 @@ function GenshinListOfArtifacts({
           />
           <img
             className={style.ArtifactsImageItself}
-            src={artifactsUrl2}
+            src={artifactUrl2}
             alt={name}
             onError={(e) => {
               e.target.src = fallbackImage; // Set fallback image on error
@@ -40,7 +43,7 @@ function GenshinListOfArtifacts({
           />
           <img
             className={style.ArtifactsImageItself}
-            src={artifactsUrl3}
+            src={artifactUrl3}
             alt={name}
             onError={(e) => {
               e.target.src = fallbackImage; // Set fallback image on error
@@ -48,7 +51,7 @@ function GenshinListOfArtifacts({
           />
           <img
             className={style.ArtifactsImageItself}
-            src={artifactsUrl4}
+            src={artifactUrl4}
             alt={name}
             onError={(e) => {
               e.target.src = fallbackImage; // Set fallback image on error
@@ -56,13 +59,13 @@ function GenshinListOfArtifacts({
           />
           <img
             className={style.ArtifactsImageItself}
-            src={artifactsUrl5}
+            src={artifactUrl5}
             alt={name}
             onError={(e) => {
               e.target.src = fallbackImage; // Set fallback image on error
             }}
           />
-        
+
           <div className={style.artifactsName}>"{name}"</div>
           <hr />
           <div>2-PIECE-BONUS: {twoPieceBonus}</div>
@@ -84,4 +87,3 @@ function GenshinListOfArtifacts({
 }
 
 export default GenshinListOfArtifacts;
-

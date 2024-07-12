@@ -13,6 +13,7 @@ function GenshinAuthProvider({ children }) {
   const [stateArtifacts, dispatchArtifacts] =
     useGenshinAuthContextReducerForArtifacts(); // artifacts
 
+
   return (
     <GenshinAuthContext.Provider
       value={{
