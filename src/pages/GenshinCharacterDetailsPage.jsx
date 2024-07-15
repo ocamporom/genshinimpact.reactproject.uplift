@@ -6,22 +6,24 @@ import fallbackImage from "../assets/paimon.png";
 import style from "./GenshinCharacterDetailsPage.module.css";
 import GenshinCharacterDetailsFooter from "../components/GenshinCharacterDetailsFooter";
 
-
-
-function GenshinCharacterDetails({iconUrl, name, description, title, vision, weapon, gender, nation, affiliation, rarity, constellation}) {
-  // const params = useParams();
-  // let name = params.name;
-
+function GenshinCharacterDetails({
+  iconUrl,
+  name,
+  description,
+  title,
+  vision,
+  weapon,
+  gender,
+  nation,
+  affiliation,
+  rarity,
+  constellation,
+}) {
   const [character, setCharacter] = useState();
-  const fetchGenshinData = async () => {
- 
-    const response = await fetch(
-      // `https://genshin.jmp.blue/characters/${slug}?`     
-      "http://localhost:3000/characters"
-    );
-    const json = await response.json();
 
-    // console.log(json);
+  const fetchGenshinData = async () => {
+    const response = await fetch("http://localhost:3000/characters");
+    const json = await response.json();
     setCharacter(json);
   };
 
@@ -29,7 +31,6 @@ function GenshinCharacterDetails({iconUrl, name, description, title, vision, wea
     fetchGenshinData();
   }, []);
 
-  
   return (
     <>
       <div className={style.genshinCharacterDetails}>
@@ -39,11 +40,9 @@ function GenshinCharacterDetails({iconUrl, name, description, title, vision, wea
         <hr />
         <div className={style.imageDetails}>
           <img
-            src={iconUrl}
+            src={iconUrl} 
             alt={name}
-            onError={(e) => {
-              e.target.src = fallbackImage; // Set fallback image on error
-            }}
+            onError={(e) => (e.target.src = fallbackImage)}
           />
         </div>
         <div className={style.CharacterInformation}>
@@ -59,12 +58,7 @@ function GenshinCharacterDetails({iconUrl, name, description, title, vision, wea
             <p>VISION: {vision}</p>
             <p>
               WEAPON:{" "}
-              <Link
-                to={`/weapons/specific/${weapon}`}
-                style={{
-                  pointerEvents: false ? "none" : "unset",
-                }}
-              >
+              <Link to={`/weapons/specific/${weapon}`}>
                 {weapon} List
               </Link>
             </p>
@@ -74,9 +68,7 @@ function GenshinCharacterDetails({iconUrl, name, description, title, vision, wea
             <p>RARITY: {rarity}</p>
             <p>CONSTELLATION: {constellation}</p>
 
-            <div className={style.backButton}>
-              {/* <Link to="/weapons">To All Weapons&#127919;</Link> <br/> */}
-            </div>
+            <div className={style.backButton}></div>
           </div>
         </div>
       </div>
@@ -87,12 +79,106 @@ function GenshinCharacterDetails({iconUrl, name, description, title, vision, wea
 
 export default GenshinCharacterDetails;
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// import { useParams } from "react-router-dom";
+// import { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import fallbackImage from "../assets/paimon.png";
 
+// import style from "./GenshinCharacterDetailsPage.module.css";
+// import GenshinCharacterDetailsFooter from "../components/GenshinCharacterDetailsFooter";
 
+// function GenshinCharacterDetails({
+//   iconUrl,
+//   name,
+//   description,
+//   title,
+//   vision,
+//   weapon,
+//   gender,
+//   nation,
+//   affiliation,
+//   rarity,
+//   constellation,
+// }) {
+//   // const params = useParams();
+//   // let name = params.name;
 
+//   const [character, setCharacter] = useState(null);
+//   const fetchGenshinData = async () => {
+//     const response = await fetch(
+//       // `https://genshin.jmp.blue/characters/${slug}?`
+//       "http://localhost:3000/characters"
+//     );
+//     const json = await response.json();
 
+//     // console.log(json);
+//     setCharacter(json);
+//   };
 
+//   useEffect(() => {
+//     fetchGenshinData();
+//   }, []);
+
+//   return (
+//     <>
+//       <div className={style.genshinCharacterDetails}>
+//         <div className={style.h1Name}>
+//           <h1>"{name}"</h1>
+//         </div>
+//         <hr />
+//         <div className={style.imageDetails}>
+//           <img
+//             src={iconUrl}
+//             alt={name}
+//             onError={(e) => {
+//               e.target.src = fallbackImage; // Set fallback image on error
+//             }}
+//           />
+//         </div>
+//         <div className={style.CharacterInformation}>
+//           <hr />
+
+//           <div className={style.CharacterInfoParagraphTextOnly}>
+//             <p>CHARACTER INFORMATION</p>
+//           </div>
+//           <hr />
+//           <div className={style.CharacterCompleteDescription}>
+//             <p> '{description}'</p>
+//             <p>TITLE: {title}</p>
+//             <p>VISION: {vision}</p>
+//             <p>
+//               WEAPON:{" "}
+//               <Link
+//                 to={`/weapons/specific/${weapon}`}
+//                 style={{
+//                   pointerEvents: false ? "none" : "unset",
+//                 }}
+//               >
+//                 {weapon} List
+//               </Link>
+//             </p>
+//             <p>GENDER: {gender}</p>
+//             <p>NATION: {nation}</p>
+//             <p>AFFILIATION: {affiliation}</p>
+//             <p>RARITY: {rarity}</p>
+//             <p>CONSTELLATION: {constellation}</p>
+
+//             <div className={style.backButton}>
+//               {/* <Link to="/weapons">To All Weapons&#127919;</Link> <br/> */}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//       <GenshinCharacterDetailsFooter />
+//     </>
+//   );
+// }
+
+// export default GenshinCharacterDetails;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // import { useParams } from "react-router-dom";
 // import { useState, useEffect } from "react";
@@ -140,7 +226,7 @@ export default GenshinCharacterDetails;
 //   const fetchGenshinData = async () => {
 //     //eto ung description nila sa baba
 //     const response = await fetch(
-//       `https://genshin.jmp.blue/characters/${slug}?`     
+//       `https://genshin.jmp.blue/characters/${slug}?`
 //       // "http://localhost:3000/videos"
 //     );
 //     const json = await response.json();
