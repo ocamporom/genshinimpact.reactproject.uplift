@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <GenshinMainPage />,
   },
   {
-    path: "/characters/:name",
+    path: "/characters/:id",
     element: <GenshinCharacterDetails />,
   },
   {

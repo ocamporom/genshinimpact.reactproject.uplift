@@ -14,7 +14,7 @@ function GenshinSpecificListOfWeapons({
 
   return (
     <>
-      <a id="top" />
+      {/* <a id="top" /> */}
       <div className={style.WeaponsList}>
         <img className={style.WeaponImageItself} src={weaponUrl} alt={name} />
 
@@ -26,7 +26,9 @@ function GenshinSpecificListOfWeapons({
         <div>LOCATION: {location}</div>
         <div>ASCENSION MATERIAL: {ascensionMaterial}</div>
         <hr />
-        <div className={style.weaponDescription}>"{passiveDesc}"</div>
+        <div className={style.weaponDescription}>
+          {passiveDesc}
+        </div>
         <div className={style.BackToTopButton}></div>
       </div>
     </>

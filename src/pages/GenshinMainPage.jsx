@@ -16,7 +16,7 @@ function GenshinMainPage() {
     const response = await fetch(`http://localhost:3000/characters`);
     const json = await response.json();
 
-    console.log(json);
+    // console.log("json: ", json);
     dispatchCharacters({
       type: "ADD_CHARACTERS",
       payload: json,
@@ -42,7 +42,7 @@ function GenshinMainPage() {
 
       <div className={style.characters}>
         {stateCharacters.characters.map((char, index) => (
-          <GenshinImage name={char.name} imageUrl={char.imageUrl} key={index} />
+          <GenshinImage id={char._id} name={char.name} imageUrl={char.imageUrl} key={index} />
         ))}
       </div>
       <GenshinMainPageFooter />

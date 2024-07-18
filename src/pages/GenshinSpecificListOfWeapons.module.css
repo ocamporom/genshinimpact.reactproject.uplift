@@ -7,7 +7,7 @@
 @media (width >= 768px) {
   .allSpecificWeapons {
     display: grid;
-    grid-template-columns: repeat(8, auto);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
    
   }

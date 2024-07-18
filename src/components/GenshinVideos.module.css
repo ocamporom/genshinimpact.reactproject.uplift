@@ -23,12 +23,35 @@
   padding-bottom: 56.25%;
   position: relative;
   height: 0;
+align-self: center;
 }
 
 .video iframe {
   left: 0;
   top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
+  height: 50dvh;
+  width: auto;
+  /* position: absolute; */
+  text-align: center;
 }
+
+@media (width >= 768px) {
+  .video iframe {
+    
+    height: 100%;
+    width: 100%;
+     position: absolute;
+  }
+}
+
+/* @media (width >= 1024px) { */
+  /* .characters {
+    grid-template-columns: repeat(8, 1fr);
+  } */
+/* 
+  /* .video iframe {
+    grid-template-columns: repeat(2, 1fr);
+    height: 50dvh;
+    width: auto;
+  } 
+} */

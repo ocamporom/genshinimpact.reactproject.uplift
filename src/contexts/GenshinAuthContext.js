@@ -3,7 +3,8 @@ import { createContext } from "react";
 const defaultValue = {
  characters : [],
  weapons : [], 
- artifacts : []  
+ artifacts : [],
+ videos: []
  
 }
 

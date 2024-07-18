@@ -3,6 +3,10 @@ import useGenshinAuthContextReducer from "./GenshinAuthContextReducer";
 import useGenshinAuthContextReducerForArtifacts from "./GenshinAuthContextReducerForArtifacts";
 import useGenshinAuthContextReducerForWeapons from "./GenshinAuthContextReducerForWeapons";
 import useGenshinSpecificListOfWeaponsReducer from "./GenshinSpecificListOfWeaponsReducer";
+import useGenshinAuthContextReducerForVideos from "./GenshinAuthContextReducerForVideos";
+
+
+
 
 function GenshinAuthProvider({ children }) {
   const [stateCharacters, dispatchCharacters] = useGenshinAuthContextReducer(); // Characters
@@ -12,7 +16,7 @@ function GenshinAuthProvider({ children }) {
     useGenshinSpecificListOfWeaponsReducer(); // Specific Weapons
   const [stateArtifacts, dispatchArtifacts] =
     useGenshinAuthContextReducerForArtifacts(); // artifacts
-
+  const [stateVideos, dispatchVideos] = useGenshinAuthContextReducerForVideos();// videos
 
   return (
     <GenshinAuthContext.Provider
@@ -21,10 +25,12 @@ function GenshinAuthProvider({ children }) {
         stateArtifacts,
         stateWeapons,
         stateSpecificWeapons,
+        stateVideos,
         dispatchCharacters,
         dispatchArtifacts,
         dispatchWeapons,
         dispatchSpecificWeapons,
+        dispatchVideos,
       }}
     >
       {children}
