@@ -13,7 +13,7 @@ function GenshinCharacterDetails() {
   const [character, setCharacter] = useState();
 
   const fetchGenshinData = async () => {
-    const response = await fetch(`http://localhost:3000/characters/${id}`);
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/characters/${id}`);
     const json = await response.json();
 
     // console.log(json);

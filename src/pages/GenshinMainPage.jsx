@@ -13,7 +13,7 @@ function GenshinMainPage() {
 
   const fetchGenshinData = async () => {
     // const response = await fetch(`https://genshin.jmp.blue/characters/all`);
-    const response = await fetch(`http://localhost:3000/characters`);
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/characters`);
     const json = await response.json();
 
     // console.log("json: ", json);

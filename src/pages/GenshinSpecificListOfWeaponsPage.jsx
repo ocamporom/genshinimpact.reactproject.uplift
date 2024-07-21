@@ -16,7 +16,7 @@ function GenshinSpecificListOfWeaponsPage() {
 
   const fetchWeapons = async () => {
     // const response = await fetch(`https://genshin.jmp.blue/weapons/all?`);
-    const response = await fetch(`http://localhost:3000/weapons?type=${name}`);
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/weapons?type=${name}`);
     const json = await response.json();
 
     dispatchSpecificWeapons({

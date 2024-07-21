@@ -14,7 +14,7 @@ function GenshinListOfArtifactspage() {
 
   const fetchArtifacts = async () => {
     // const response = await fetch(`https://genshin.jmp.blue/artifacts/all?`);
-    const response = await fetch(`http://localhost:3000/artifacts`);
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/artifacts`);
     const json = await response.json();
 
     console.log("json", json);
