@@ -13,7 +13,9 @@ function GenshinCharacterDetails() {
   const [character, setCharacter] = useState();
 
   const fetchGenshinData = async () => {
-    const response = await fetch(`${import.meta.env.VITE_BACKEND_URI}/characters/${id}`);
+    const response = await fetch(
+      `${import.meta.env.VITE_BACKEND_URI}/characters/${id}`
+    );
     const json = await response.json();
 
     // console.log(json);
@@ -29,9 +31,15 @@ function GenshinCharacterDetails() {
   const description =
     character === undefined ? "Loading..." : character.description;
 
+  // const weapon = character === undefined ? "Loading..." : character.weapon_type;
+  // const weaponType =
+  //   weapon.charAt(0).toUpperCase() + weapon.slice(1).toLowerCase();
+
   const weapon = character === undefined ? "Loading..." : character.weapon_type;
   const weaponType =
-    weapon.charAt(0).toUpperCase() + weapon.slice(1).toLowerCase();
+    typeof weapon === "string"
+      ? weapon.charAt(0).toUpperCase() + weapon.slice(1).toLowerCase()
+      : "";
   const vision = character === undefined ? "Loading..." : character.vision;
   const rarity = character === undefined ? "Loading..." : character.rarity;
   const title = character === undefined ? "Loading..." : character.title;
